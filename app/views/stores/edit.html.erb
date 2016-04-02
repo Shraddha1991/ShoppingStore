@@ -1,0 +1,79 @@
+
+
+<h1  class="storeh1">Edit Store</h1>
+
+
+
+
+<div class="displaydiv2">
+  
+  <%= form_for @store do |f| %>
+
+<% if @store.errors.any? %>
+<h2>Errors</h2>
+<ul >
+  <% @store.errors.full_messages.each do |message| %>
+  <li><%= message %></li>
+  
+  <% end %>
+</ul>
+
+<% end %>
+  
+
+
+<p>
+  
+  <%= f.label :Store_Name %>
+  <%= f.text_field :Store_Name %>
+  
+</p>
+
+<p>
+  
+  <%= f.label :Manager %>
+  <%= f.text_field :Manager %>
+  
+</p>
+
+<p>
+  
+  <%= f.label :City %>
+  <%= f.text_field :City %>
+  
+</p>
+
+<p>
+  
+  <%= f.label :Zipcode %>
+  <%= f.text_field :Zipcode %>
+  
+</p>
+
+<p>
+  
+  <%= f.label :State %>
+  <%= f.text_field :State %>
+  
+</p>
+
+<p>
+  
+  <%= f.label :Country %>
+  <%= f.text_field :Country %>
+  
+</p>
+
+
+<p>
+  </br>
+
+  <%= f.submit "Update Store" ,:class=>"button"%> &nbsp &nbsp &nbsp &nbsp
+   <%= link_to '<button type="button" class="button">Back</button>'.html_safe, stores_path %>
+  
+</p>
+
+</div>
+
+
+<% end %>

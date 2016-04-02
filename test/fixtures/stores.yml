@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Store_Name: MyString
+  Manager: MyString
+  City: MyString
+  State: MyString
+  Country: MyString
+  Zipcode: MyString
+
+two:
+  Store_Name: MyString
+  Manager: MyString
+  City: MyString
+  State: MyString
+  Country: MyString
+  Zipcode: MyString

@@ -1,0 +1,49 @@
+<h1 class="storeh1">Store Details</h1>
+<div class="displaydiv2">
+
+ 
+
+  <p>
+  <label class="thicker">Store_Name :</label>  <%= @store.Store_Name %>   
+  </p>
+  
+  <p>
+      <label class="thicker">Manager    :</label><%= @store.Manager %>
+  </p>
+  
+  <p>
+      <label class="thicker">City       :</label><%= @store.City %>
+  </p>
+  
+  <p>
+      <label class="thicker">Zipcode    :</label><%= @store.Zipcode %>
+  </p>
+  
+  <p>
+       <label class="thicker">State      :</label><%= @store.State %>
+  </p>
+  
+ <p>
+      <label class="thicker">Country    :</label><%= @store.Country %>
+ </p>
+ 
+ 
+
+
+</div>
+<div class="displaydiv3">
+    <p>
+        <%= link_to '<button type="button" class="button">Edit</button>'.html_safe, edit_store_path(@store) %> &nbsp &nbsp 
+       
+        <%= link_to '<button type="button" class="button">Delete</button>'.html_safe, store_path(@store),
+                                         method: :delete,
+                                         data: { confirm: 'Are you sure?' } %>&nbsp &nbsp
+          
+          
+           <%= link_to '<button type="button" class="button">Back</button>'.html_safe, stores_path %>
+          
+          </p>
+        
+      
+  
+</div>

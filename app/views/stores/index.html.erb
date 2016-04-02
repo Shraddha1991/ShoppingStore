@@ -1,0 +1,42 @@
+
+<div class="storediv">
+<h1  class="storeh1">Stores Directory</h1>
+
+<table id="stores" class="storetable">
+  <thead>
+  <tr>
+
+  
+  <th>Store_Name</th>
+    <th>Manager</th>
+  	<th>City</th>
+  	 <th>Zipcode</th>
+    <th>State</th>
+    <th>Country</th>
+ 
+
+  </tr>
+  
+</thead>
+    
+
+
+
+<tbody>
+  <% @stores.each do |store| %>
+  
+<tr>
+    <td><%= link_to store.Store_Name,store %></td>
+    <td> <%= store.Manager %> </td>
+    <td> <%= store.City %> </td>
+    <td> <%= store.Zipcode %> </td>
+    <td> <%= store.State %> </td>
+    <td> <%= store.Country %> </td>
+</tr>
+
+<% end %>
+</tbody>
+
+</table>
+</div>
+<p><%= link_to '<button type="button" class="button">Add New Store</button>'.html_safe,new_store_path %></p>
